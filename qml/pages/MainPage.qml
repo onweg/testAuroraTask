@@ -42,16 +42,18 @@ Page {
     objectName: "mainPage"
     allowedOrientations: Orientation.All
 
-    Connections{
-        target: status_object
-        onSendStatus: {
-            label.text = "Новый статус: " + value_status
+    Connections {
+        target: statusSender
+        onStatusChanged: {
+            console.log("Status changed to:", status)
+            // Обновите ваш Label здесь
+            label.text = "Статус: " + status
         }
     }
 
     Label {
         id: label
-        text: "test"
+        text: "status: " + statusValue
         anchors.centerIn: parent
     }
 

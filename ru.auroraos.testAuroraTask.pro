@@ -43,11 +43,9 @@ CONFIG += \
 PKGCONFIG += \
 
 SOURCES += \
-    src/main.cpp \
-    src/status.cpp
+    src/main.cpp
 
-HEADERS += \
-    src/status.h
+HEADERS +=
 
 DISTFILES += \
     rpm/ru.auroraos.testAuroraTask.spec \
